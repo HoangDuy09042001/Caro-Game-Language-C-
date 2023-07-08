@@ -4,6 +4,8 @@
 #include "ascii_art.hpp"
 #include "login.hpp"
 #include "logout.hpp"
+#include "caro.hpp"
+
 int main()
 {   
     printAsciiArt();
@@ -22,6 +24,7 @@ int main()
         std::cout << " 1. Login\n";
         std::cout << " 2. Logout\n";
         std::cout << " 3. Exit\n";
+        std::cout << " 4. Caro\n";
         std::cout << "Enter your choice: ";
         int choice;
         std::cin >> choice;
@@ -32,6 +35,9 @@ int main()
             break;
         case 2:
             logout(socket);
+            break;
+        case 4:
+            create_game(socket);
             break;
         case 3:
             return 0;
